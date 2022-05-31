@@ -403,6 +403,8 @@ int main(int argc, char *argv[])
         if (rand() > REPEATED_NAME_PROBABILITY)
         {
             get_random_name(fp, name, sizeof name);
+            name[strlen(name) - 1 ] = '\0';
+            printf("String is %s. \n", name);
         }
         type = get_random_type();
         blast(&context, name, type);
